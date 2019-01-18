@@ -30,6 +30,11 @@ resource "libvirt_domain" "domain" {
   count = "${var.count}"
   qemu_agent = true
 
+  // use xslt to configure the sbd disk as shareable.
+    xml {
+    xslt = "${file("./modules/host/shareable.xsl")}"
+  }
+
   // base disk + additional disks if any
   disk = ["${concat(
     list(
