@@ -3,6 +3,10 @@ base:
     - match: grain
     - hana
 
+  'role:majority_maker_node':
+    - match: grain
+    - cluster
+
   'G@role:hana_node and G@ha_enabled:true':
     - match: compound
     - cluster
@@ -47,3 +51,8 @@ predeployment:
     - match: grain
     - default
     - monitoring_srv
+
+  'role:majority_maker_node':
+    - match: grain
+    - default
+    - cluster_node

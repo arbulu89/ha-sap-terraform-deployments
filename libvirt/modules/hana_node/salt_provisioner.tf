@@ -43,6 +43,8 @@ hana_sapcar_exe: ${var.hana_sapcar_exe}
 hana_archive_file: ${var.hana_archive_file}
 hana_extract_dir: ${var.hana_extract_dir}
 hana_inst_media: ${var.hana_inst_media}
+cluster_ssh_pub: salt://sshkeys/cluster.id_rsa.pub
+cluster_ssh_key: salt://sshkeys/cluster.id_rsa
 EOF
     destination = "/tmp/grains"
   }

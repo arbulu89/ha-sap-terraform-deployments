@@ -32,6 +32,10 @@ hana:
         {% endif %}
         system_user_password: YourPassword1234
         sapadm_password: YourPassword1234
+        #extra_parameters:
+        #  org_manager_password: YourPassword1234
+        #  components: server,xs
+        #  xs_domain_name: suse.com
       {%- if grains.get('ha_enabled') %}
       primary:
         name: PRIMARY_SITE_NAME
@@ -72,6 +76,10 @@ hana:
         {% endif %}
         system_user_password: YourPassword1234
         sapadm_password: YourPassword1234
+        #extra_parameters:
+        #  org_manager_password: YourPassword1234
+        #  components: server,xs
+        #  xs_domain_name: suse.com
       {%- if grains.get('ha_enabled') %}
       secondary:
         name: SECONDARY_SITE_NAME
